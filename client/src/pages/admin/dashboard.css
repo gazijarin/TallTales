@@ -1,0 +1,131 @@
+/*
+div {
+    border: 1px solid blue;
+}
+span {
+    border: 1px solid red;
+}
+*/
+
+.browseStoriesHeader {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.dashboardLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardDivider {
+  width: 150px;
+}
+
+.dashboardRight {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userIconContainer {
+  height: 233px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.dashboardMenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.userIconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.storiesNavigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.profileAvatarContainer {
+  margin-top: 30px;
+}
+
+.adminContent {
+  margin-top: 25px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.buttonStyle {
+  width: 310px;
+  height: 60px;
+  color: #ededed;
+  background-color: #292929;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: none;
+  font-weight: bolder;
+  font-size: 14px;
+  height: 56px;
+  border-radius: 5px; /* TODO: needs to be moved to appropriate CSS location */
+}
+
+.buttonStyle:hover {
+  cursor: pointer;
+}
+
+/* removes ugly column separators in mui grid data */
+.lastcolumnSeparator .MuiDataGrid-columnSeparator--sideRight {
+  display: none !important;
+}
+
+/* removes 1 pixel border above the footer in mui grid data */
+.MuiDataGrid-footerContainer {
+  border-top-width: 0px !important;
+}
+
+/* .MuiDataGrid-menuList {
+  background-color: #cacaca;
+}
+
+.MuiDataGrid-panelWrapper {
+  background-color: #cacaca;
+}
+
+.MuiDataGrid-filterForm {
+  background-color: #cacaca;
+}
+
+.MuiDataGrid-filterFormColumnInput {
+  padding: 0px 15px;
+  height: 60px;
+}
+
+.MuiInput-root {
+  padding: 0px 15px;
+  height: 60px;
+}
+
+.MuiInputBase-formControl {
+  height: 60px;
+} */

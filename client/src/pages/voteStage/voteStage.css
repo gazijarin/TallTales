@@ -1,0 +1,122 @@
+.vote-stage-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vote-stage-story {
+  margin-left: 10%;
+}
+.vote-stage .story-title {
+  font-size: 36px;
+  font-style: "IBM Plex Sans";
+  font-weight: bolder;
+  color: #1b1b1b;
+}
+.vote-stage .story-current {
+  font-family: "IBM Plex Sans";
+  font-size: 26px;
+  font-style: italic;
+  color: rgb(83, 83, 83);
+  max-width: 600px;
+}
+
+.vote-stage-turns {
+  margin-right: 5%;
+}
+.vote-stage-raconteur {
+  font-size: 36px;
+  font-style: "Inter";
+  font-weight: bolder;
+  color: #1b1b1b;
+}
+
+.raconteur {
+  color: #676767;
+}
+
+.vote-stage-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 600px;
+}
+
+.vote-option-text {
+  color: #ededed;
+  font-family: "IBM Plex Mono";
+  background-color: #2d2d2d;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+  border: none;
+  font-size: 16px;
+  width: 320px;
+}
+
+.vote-option-text-selected {
+  background-color: #a2a2a2;
+}
+
+.vote-option-text:hover {
+  background-color: #292929;
+  color: #989494;
+  cursor: pointer;
+}
+
+.vote-stage-sentence {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.sentence-title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-style: "IBM Plex Mono";
+  font-weight: bolder;
+  padding-right: 40px;
+  color: #676767;
+}
+
+.sentence-content {
+  color: #808080;
+  font-style: "Inter";
+  background-color: #dedede;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  width: 320px;
+}
+
+.sentence-content-choice {
+  color: #808080;
+  font-style: "Inter";
+  background-color: #dedede;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  width: 320px;
+}
+
+.checkMarkContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.checkMarkContainer:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }

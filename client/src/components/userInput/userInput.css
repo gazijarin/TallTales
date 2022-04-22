@@ -1,0 +1,37 @@
+.user-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-input-header {
+  font-family: "IBM Plex Sans";
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.user-input-tag {
+  font-family: "IBM Plex Mono";
+  font-weight: bold;
+  font-style: italic;
+  color: #6f6f6f;
+}
+
+.user-input-text-field {
+  margin: auto 0;
+}
+.stage-indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.stage-arrow {
+  height: 26px;
+  width: 26px;
+  padding-right: 10px;
+}
+
+.user-input-text-field .MuiTextField-root {
+    min-width: 400px !important;
+}

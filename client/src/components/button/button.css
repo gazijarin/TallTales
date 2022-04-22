@@ -1,0 +1,16 @@
+.buttonStyle {
+  color: white;
+  background-color: #989494;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  border: none;
+}
+
+.buttonStyle:hover {
+  background-color: white;
+  color: #989494;
+  cursor: pointer;
+}

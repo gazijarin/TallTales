@@ -1,0 +1,12 @@
+.arrowLeft {
+  width: 0px;
+  height: 0px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid
+}
+
+.arrowLeft:hover {
+    cursor: pointer;
+    opacity: 50%;
+}

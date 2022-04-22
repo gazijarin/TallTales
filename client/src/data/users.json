@@ -1,0 +1,192 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "score": 0,
+      "icon": "avatar01.png",
+      "raconteur": false,
+      "host": true,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": true,
+      "gamesPlayed": 9,
+      "highScore": 312
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "score": 0,
+      "icon": "avatar02.png",
+      "raconteur": true,
+      "host": false,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": false,
+      "gamesPlayed": 5,
+      "highScore": 250
+    },
+    {
+      "username": "jordan",
+      "password": "jordan",
+      "score": 0,
+      "icon": "avatar03.png",
+      "raconteur": false,
+      "host": false,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": true,
+      "gamesPlayed": 12,
+      "highScore": 212
+    },
+    {
+      "username": "chris",
+      "password": "chris",
+      "score": 0,
+      "icon": "avatar04.png",
+      "raconteur": false,
+      "host": false,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": false,
+      "gamesPlayed": 15,
+      "highScore": 214
+    },
+    {
+      "username": "jasper",
+      "password": "jasper",
+      "score": 0,
+      "icon": "avatar01.png",
+      "raconteur": false,
+      "host": false,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": true,
+      "gamesPlayed": 1,
+      "highScore": 400
+    },
+    {
+      "username": "gazi",
+      "password": "gazi",
+      "score": 0,
+      "icon": "avatar02.png",
+      "raconteur": false,
+      "host": false,
+      "currentSentence": ". . .",
+      "stories": [],
+      "isAdmin": true,
+      "gamesPlayed": 57,
+      "highScore": 220
+    },
+    {
+      "username": "chrisee",
+      "isAdmin": false,
+      "gamesPlayed": 23,
+      "highScore": 220
+    },
+    {
+      "username": "seiken",
+      "isAdmin": false,
+      "gamesPlayed": 5,
+      "highScore": 413
+    },
+    {
+      "username": "angie",
+      "isAdmin": false,
+      "gamesPlayed": 13,
+      "highScore": 250
+    },
+    {
+      "username": "fenil",
+      "isAdmin": true,
+      "gamesPlayed": 42,
+      "highScore": 280
+    },
+    {
+      "username": "saad",
+      "isAdmin": true,
+      "gamesPlayed": 69,
+      "highScore": 100
+    },
+    {
+      "username": "anna",
+      "isAdmin": false,
+      "gamesPlayed": 10,
+      "highScore": 320
+    },
+    {
+      "username": "cordelia",
+      "isAdmin": false,
+      "gamesPlayed": 4,
+      "highScore": 500
+    },
+    {
+      "username": "thom",
+      "isAdmin": false,
+      "gamesPlayed": 124,
+      "highScore": 420
+    }
+  ],
+  "inputs": [
+    {
+        "user": "gazi",
+        "inputs": [
+            "This is all happening on a fishing boat in northern Canada.",
+            "Gazi and Jasper watch on, bemused.",
+            "No one thought to bring a can opener with them.",
+            "Chris reminds everyone he's on a plant-based diet.",
+            "A hostile, carnivorous monkey attacks Chris shortly after this proclamation.",
+            "A swarm of rats emerges from the lower decks and start chipping the cans open.",
+            "Jordan throws a can at the monkey, scoring a direct hit.",
+            "The monkey faints and falls off a slightly chewed-on Chris. While this was happening, the rats opened all the cans and carried away the pet food.",
+            "Luckily, since northern Canada is basically a freezer, the expiration date had no effect, so the remaining food is edible, with plenty of plant-based options.",
+            "Chris and Jasper eat canned sauerkraut, while Jordan and Gazi cook up some monkey stew."
+        ]
+    },
+    {
+        "user": "jasper",
+        "inputs": [
+            "Our story begins in an empty grocery store, in the midst of a zombie apocalypse.",
+            "Gazi and Jasper return from frozen aisle, confirming that they have 2 remaining days of food rations.",
+            "There was not a can opener in sight.",
+            "Jordan shouts in excitement, he spots pack of perfectly packed Twinkies.",
+            "Everyone races towards the food, leading to Jasper being shoved to the ground.",
+            "Rats swarm out of nowhere and snatch the remaining Twinkies off the floor.",
+            "The group can only watch in terror as the final rat nibbles away at the last Twinky.",
+            "Out of the corner of her eyes, Gazi spots a crack in the floor. She inches forward and reveals a removeable floor tile.",
+            "Chris slowly lifts open the floor tile, revealing an entire storage of Twinkies boxes.",
+            "Everyone eats Twinkies, momentarily forgetting about the zombies clawing outside the door."
+        ]
+    },
+    {
+        "user": "jordan",
+        "inputs": [
+            "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in.",
+            "Out of nowhere, Jasper climbs out of the chimney and Gazi walks out of a bedroom. They have been trapped as well.",
+            "Our newly formed group starts to panic, realizing that their food rations will not feed all 4 of them.",
+            "Instantly, Jordan leaps to horde the cans of food, convinced that expired pet food is better than no food.",
+            "Chris and Jasper get up and tackle Jordan, forcing him to hand over the cans.",
+            "Suddenly, Gazi shouts, realizing that a room in the house holds dozens of science fair inventions.",
+            "Within the inventions the group finds a flamethrower, the solution to their very dire problem.",
+            "Jordan prepares the flamethrower, understanding that this is the only way out.",
+            "Jasper opens the door, and as snow starts flooding in, Jordan starts up the flamethrower.",
+            "In seconds, the snow clears from the flames and paves a path towards freedom. The group walks out, leaving the cans of pet food behind."
+        ]
+    },
+    {
+        "user": "chris",
+        "inputs": [
+            "Chris and Jordan stand in front of their kitchen table, determined to win their upcoming science fair with their canned food transformer.",
+            "Gazi and Jasper patiently sit across from them, excited to taste test what their friends' invention has made.",
+            "Jasper takes a can and opens it. He brings a spoonful of goo to his mouth.",
+            "Jasper screams. The food starts to turn him into a werewolf.",
+            "As if his body is moving on its own, the werewolf slashes at Jordan, causing a gash on Jordan's arm.",
+            "A rat falls from above.",
+            "The werewolf takes a look at the rat and reaches for it. He puts it in his mouth.",
+            "The werewolf howls as if ingesting the rat has caused it an immense amount of pain.",
+            "All of a sudden, the werewolf transforms back to Jasper's human form. It appears that eating a rat will reverse the effects of the werewolf transformation.",
+            "Chris and Jordan went on to win the upcoming science fair for presenting their new werewolf transformer."
+        ]
+    }
+  ]
+}

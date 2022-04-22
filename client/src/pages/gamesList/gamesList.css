@@ -1,0 +1,63 @@
+.gamesList-new .user-icon {
+  padding-left: 125px;
+}
+
+.gamesListMenu .user-login-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gamesListMenu .user-input-fields {
+  padding: 0;
+  padding-right: 30px;
+}
+
+.gamesListMenu .MuiInputBase-root {
+  color: rgb(178, 178, 178) !important;
+  background-color: #292929 !important;
+}
+
+.gamesListMenu .MuiInputLabel-root {
+  font-family: "IBM Plex Mono" !important;
+  font-size: 14px !important;
+  font-weight: bolder;
+  color: white !important;
+  left: 24% !important;
+  transform-origin: top center !important;
+}
+
+.gamesListMenu .MuiFilledInput-input {
+  font-family: "IBM Plex Mono" !important;
+  font-size: 20px !important;
+  color: rgb(156, 156, 156) !important;
+  text-align: center !important;
+  transform-origin: top center !important;
+}
+
+.gamesListMenu .MuiFormControl-root {
+  margin: 0;
+}
+
+.gamesListMenu .buttonStyle {
+  width: 150px;
+  margin-top: 10px;
+  background-color: rgb(124, 124, 124);
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-family: "IBM Plex Mono" !important;
+  font-weight: bolder !important;
+  color: black !important;
+}
+
+.MuiDataGrid-cellContent {
+  font-family: "IBM Plex Mono" !important;
+  font-weight: bolder !important;
+  color: #5c5c5c !important;
+}
+.MuiTablePagination-displayedRows {
+  font-family: "IBM Plex Mono" !important;
+  font-weight: bolder !important;
+  color: black !important;
+}

@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+}
+
+.leaderboard-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.leaderboard-story {
+    margin-left: 10%;
+}
+
+.leaderboard-scoreboard {
+    margin-right: 10%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+
+    font-family: "Inter";
+    font-size: 23px;
+    width: 700px;
+    color: #808080;
+
+    background-color: #d6d6d6;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footer-button {
+    margin-right: 10%;
+}
+  

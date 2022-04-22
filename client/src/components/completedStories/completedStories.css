@@ -1,0 +1,25 @@
+.storiesNavigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.storiesDisplay {
+  margin-top: 20px;
+  width: 800px;
+  display: flex;
+  text-align: justify;
+}
+
+.browseStoriesHeader img {
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+.browseStoriesHeader img:hover {
+  opacity: 50%;
+  cursor: pointer;
+}

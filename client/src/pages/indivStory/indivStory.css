@@ -1,0 +1,20 @@
+.indiv-story-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.indiv-story-story {
+    margin-left: 10%;
+}
+
+.indiv-story-scoreboard {
+    margin-right: 10%;
+}
+
+.indiv-story-footer-button {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
+}

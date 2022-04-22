@@ -1,0 +1,87 @@
+.browseStoriesHeader {
+  font-weight: bold;
+  font-size: 30px;
+  color: #3c3c3c;
+  font-family: "IBM Plex Mono";
+}
+
+.header {
+  display: flex;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.dashboardLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardDivider {
+  width: 150px;
+}
+
+.dashboardRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.userIconContainer {
+  height: 233px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.dashboardMenu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.userIconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.storiesNavigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15%;
+  height: 60px;
+}
+
+.storiesDisplay {
+  width: 900px;
+  font-size: 26px;
+  font-family: "IBM Plex Mono";
+  color: #939393;
+  display: flex;
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+.buttonStyle {
+  width: 310px;
+  height: 60px;
+  color: #ededed;
+  background-color: #292929;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: none;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+}
+
+.buttonStyle:hover {
+  cursor: pointer;
+}

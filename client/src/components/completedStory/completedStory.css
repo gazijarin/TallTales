@@ -1,0 +1,33 @@
+.completed-story {
+  text-align: left;
+}
+
+.completed-story-title {
+  font-family: "IBM Plex Mono";
+  font-size: 40px;
+  padding-bottom: 20px;
+  color: #808080;
+}
+
+.completed-story-start {
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  font-style: italic;
+  max-width: 800px;
+  color: #1d1d1d;
+  padding-bottom: 25px;
+}
+
+.completed-story-contribution {
+  font-family: "IBM Plex Mono";
+  font-size: 24px;
+  max-width: 800px;
+  line-height: 1.5;
+  color: #808080;
+  padding-bottom: 25px;
+}
+
+.indiv-story .buttonStyle {
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+}

@@ -1,0 +1,17 @@
+.userInputTextFieldOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  margin-right: -25px;
+}
+
+.userInputTextFieldTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  margin-right: -5px;
+}

@@ -1,0 +1,15 @@
+  .changeAvatarInterface {
+    display: flex;
+    height: 320px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:flex-end;
+  }
+  
+  .changeAvatarBrowser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  

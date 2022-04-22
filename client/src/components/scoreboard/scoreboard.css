@@ -1,0 +1,46 @@
+.scoreboard-players {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.player-container:hover {
+  background-color: rgba(255, 255, 255, 0.382);
+  cursor: pointer;
+}
+
+.scoreboard-players img {
+  height: 90px;
+  width: 90px;
+  object-fit: contain;
+  padding-right: 30px;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-info-name {
+  font-size: 24px;
+  font-style: "IBM Plex Sans";
+  font-weight: bold;
+  color: #282828;
+}
+
+.player-info-score {
+  font-family: "IBM Plex Mono";
+  font-size: 25px;
+  font-weight: bolder;
+  color: #676767;
+}

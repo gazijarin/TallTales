@@ -1,0 +1,35 @@
+.login-header {
+  display: flex;
+  justify-content: left;
+}
+
+.signup-message {
+  font-weight: bold;
+  font-family: "IBM Plex Sans";
+  color: #808080;
+}
+
+.signup-link {
+  color: rgb(232, 229, 224);
+}
+
+.signup-link:hover {
+  color: #525151;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.MuiButton-root {
+  font-family: "IBM Plex Mono" !important;
+  font-weight: 1000 !important;
+  font-size: 24px !important;
+  color: rgb(117, 117, 117) !important;
+}
+
+.MuiButton-root:hover {
+  color: rgb(50, 50, 50) !important;
+  background-color: transparent !important;
+}

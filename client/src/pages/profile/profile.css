@@ -1,0 +1,150 @@
+.profile-header {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileLeft {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 15%;
+}
+
+.profileRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.userIconContainer {
+  height: 233px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.userIconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profile.buttonStyle {
+  width: 310px;
+  height: 60px;
+  color: #ededed;
+  background-color: #292929;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: none;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.profileHomeInterface {
+  padding-top: 10%;
+}
+.profileHomeInterface .buttonStyle {
+  margin-top: 20px;
+  width: 200px;
+}
+
+.profileHomeInterface .storiesNavigation {
+  width: 1000px;
+  padding-top: 30%;
+}
+
+.profileHomeInterface .storiesDisplay {
+  width: 1000px;
+}
+
+.profile .user-icon {
+  padding-top: 60px;
+}
+.buttonStyle:hover {
+  cursor: pointer;
+}
+
+.buttonActive {
+  background-color: #8e8e8e;
+  cursor: default;
+}
+
+.profileInterface {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileAvatarContainer {
+  display: flex;
+  flex-direction: row;
+  padding-right: 10%;
+}
+
+.profileInterfaceDivider {
+  display: none;
+}
+
+.changeUserDetailsInterface {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30%;
+  width: 1500px;
+}
+
+.changeAvatarInterface {
+  display: flex;
+  height: 320px;
+  width: 1500px;
+  padding-top: 20%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.changeAvatarBrowser {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.changeAvatarInterface .buttonStyle {
+  margin: auto;
+}
+
+.profileInputSection {
+  margin: auto;
+}
+
+.profileInputButton {
+  margin-top: 20px;
+  margin: auto;
+}
+
+.profileInputButtonLabel {
+  width: 310px;
+  height: 60px;
+  margin-right: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+  text-align: center;
+  width: 310px;
+  height: 60px;
+  padding: 40px 0;
+  box-sizing: border-box;
+}

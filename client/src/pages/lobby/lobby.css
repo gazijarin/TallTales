@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lobby-header {
+  font-size: 56px;
+  font-style: "IBM Plex Sans";
+  font-weight: bolder;
+  padding-bottom: 50px;
+  color: #363636;
+}
+.lobby-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.lobby-players {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 490px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.lobby-genre {
+  margin-top: 70px;
+  padding: 0;
+  width: 200px;
+}
+
+.lobby-genre .MuiInputLabel-root {
+  color: rgb(225, 225, 225) !important;
+  left: 0px !important;
+  font-family: "IBM Plex Mono" !important;
+  font-weight: 600;
+  font-size: 16px !important;
+  transform-origin: top left !important;
+}
+
+.lobby-genre .Mui-focused {
+  color: rgb(225, 225, 225) !important;
+}
+
+.mute-footer {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  justify-content: right;
+  display: flex;
+}
+
+.lobby.buttonStyle {
+  color: #ededed;
+  background-color: rgb(57, 56, 55);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.buttonStyle:hover {
+  background-color: #292929;
+  color: #989494;
+  cursor: pointer;
+}

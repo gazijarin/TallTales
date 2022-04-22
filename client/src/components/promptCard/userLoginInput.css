@@ -1,0 +1,41 @@
+.user-input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-login-text {
+  font-family: "IBM Plex Sans";
+  font-size: 44px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.text-button {
+  color: red;
+}
+
+.MuiInputBase-root {
+  color: rgb(178, 178, 178) !important;
+  background-color: rgb(57, 56, 55) !important;
+}
+
+.MuiInputLabel-root {
+  font-family: "IBM Plex Mono" !important;
+  font-size: 16px !important;
+  color: white !important;
+  left: 46px !important;
+  transform-origin: top center !important;
+}
+
+.MuiFilledInput-input {
+  font-family: "IBM Plex Mono" !important;
+  font-size: 16px !important;
+  color: rgb(156, 156, 156) !important;
+  text-align: center !important;
+  transform-origin: top center !important;
+}

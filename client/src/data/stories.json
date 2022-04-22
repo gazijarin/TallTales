@@ -1,0 +1,57 @@
+{
+    "prompts": [
+      {
+        "genre": "Adventure",
+        "backstory": ["Backstory 1/3: Where is this happening exactly?", "Backstory 2/3: Who else is involved?", "Backstory 3/3: Anything else to set up?"],
+        "conflict": ["Conflict 1/4: How can we make the story more spicy?", "Conflict 2/4: What if one of our heroes got attacked by a monkey?", "Conflict 3/4: Oh my god! Rats everywhere!", "Conflict 4/4: Last chance for things to go wrong!"],
+        "resolution": ["Resolution 1/3: Okay, time to resolve the drama.", "Resolution 2/3: Any loose ends left?", "Resolution 3/3: Final chance to wrap things up!"]
+      },
+      {
+        "genre": "Mystery",
+        "backstory": ["Backstory 1/3: Where does the story take place?", "Backstory 2/3: Who else is involved?", "Backstory 3/3: How about the final mystery element?"],
+        "conflict": ["Conflict 1/4: How can we make the story more spicy?", "Conflict 2/4: What if one of our characters gets attacked?", "Conflict 3/4: Oh my god! Something big happened!", "Conflict 4/4: Okay, the dust is settling..."],
+        "resolution": ["Resolution 1/3: Okay, time to set up the big reveal...", "Resolution 2/3: And here's the big reveal!", "Resolution 3/3: Final chance to showcase any emotions!"]
+      }
+    ],
+    "stories": [
+        {
+            "genre": "Adventure",
+            "starts": [
+              "chris and jordan are trying to turn random cans of food into something remotely tasty. When most canned “food” is either pet food or well past its expiration date (or both), they’ve got to turn to other means."
+            ]
+        },
+        {
+            "genre": "Mystery",
+            "starts": [
+                "Detectives jasper, gazi, and chris are investigating a break-in at a bakery. The only thing missing? A very secret ingredient."
+            ]
+        }
+    ],
+    "currStory": {
+        "start": "chris and jordan are trying to turn random cans of food into something remotely tasty. When most canned “food” is either pet food or well past its expiration date (or both), they’ve got to turn to other means.",
+        "story": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in.",
+        "contributions": [
+            {
+                "username": "jordan",
+                "sentence": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in."
+            },
+            {
+                "username": "user",
+                "sentence": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in."
+            },
+            {
+                "username": "admin",
+                "sentence": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in."
+            },
+            {
+                "username": "chris",
+                "sentence": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in."
+            },
+            {
+                "username": "user",
+                "sentence": "The snow continues falling, piling around the the cabin that Chris and Jordan find themselves trapped in."
+            }
+        ]
+    }
+  }
+  

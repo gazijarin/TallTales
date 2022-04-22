@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@500&family=Inter&display=swap");
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.Toastify__toast {
+  font-family: "IBM Plex Sans" !important;
+}
+
+.timer-container {
+  margin: auto 0;
+  font-size: 60px;
+  padding-left: 40px;
+  width: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cacaca;
+}
+
+/* grip */
+::-webkit-scrollbar-thumb {
+  background: #b2b1b1;
+  border-radius: 4px
+}
+
+/* grip on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #292929;
+}

@@ -1,0 +1,22 @@
+.app-name {
+  padding-left: 80px;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.app-name-name {
+  color: black;
+  font-size: 90px;
+  font-family: "IBM Plex Sans";
+  font-weight: 1000;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.app-name-tag {
+  color: #808080;
+  font-size: 36px;
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+}
