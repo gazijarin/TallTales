@@ -1,97 +1,18 @@
-# team19 (Chris, Gazi, Jasper, Jordan)
+# Tall Tales
+**Developer Team**: Chris, Gazi, Jasper and Jordan
 
-Deployed Heroku link: https://talltales.herokuapp.com/
+**Deployed Application**: https://talltales.herokuapp.com/
 
-GENERAL GAME DESCRIPTION
-========================
+## Description
 
 Tall Tales is a multiplayer collaborative story-telling web app for 3-5 players, inspired by popular party-games such as the Jackbox Party Packs, Code Names, Gartic Phone, and Skribbl.io. The basic gameplay consists of providing the players with creative prompts for writing their own story sentences. Each round, one of the players serves as the Raconteur, who decides which sentence is the funniest or most appropriate to continue the story. There are a total of 10 rounds, divided into several basic story elements: Backstory, Conflict, Resolution. After all rounds are completed, the player with the highest score is crowned as the most valuable contributor. In the leaderboard page, the collaborative story is displayed for all to see, as well as stored for later retrieval via their user profile. In their personal profile page, users have a plethora of customizable options such as sharing their past stories, editing their account information, and reviewing past games. 
 
 What separates Tall Tales from other JavaScript games is its usage of sockets to allow for multi-device gameplay, connecting friends across the internet. Come explore all of the cool features of Tall Tales, including gameplay soundtracks, a virtual game host, and various genres/prompts that spark unique stories with every new game!
 
-REGISTERED USERS
-================
-
-We have set up a number of users to demo the app more convincingly. They are listed below in the username:password format. 
-
-	user:user
-	user1:user1
-	admin:admin
-	jordan:jordan
-	chris:chris
-	jasper:jasper
-	gazi:gazi
-
-These are only the pre-existing default accounts; users are also able to create their own accounts! More on that later.
-
-ROUTES OVERVIEW
-==================
-**_users.js_**
-
-Our users.js file in our Express server provides the routes for all user-related activities. Each of the routes underneath detail the function of a user route, the expected data they receive, and expected return value. Please note that each route will begin with '/users', for example, '/users/register'.
-- **router.route('/register').post():** Adds a user, expects a user object with {username, password, icon} attributes, returns a user object with {username, icon, stories, prompts, admin, \_id}.
-- **router.route('/login').post():** Logs in a user and populates a session, expects a user object with {username, password} attributes, upon success returns a user object with {currentUser: username} and upon failure returns an error.
-- **router.route('/logout').get():** Logs out a user and destroys the session, upon success returns nothing and upon failure returns an error.
-- **router.route('/check-session').get():** Checks if a user is logged in on the session, upon success returns a user object with {currentUser: username} and upon failure changes the status to 401.
-- **router.route('/user/:username').get():** Gets a specific user, upon sucess returns a user object and upon failure returns an error.
-- **router.route('/user/:username').delete():** Deletes a user, upon success returns the deleted user object with {username, icon, stories, prompts, admin, \_id} and upon failure returns an error message.
-- **router.route('/admin/:username').post():** Makes a user admin, upon success returns the user object and upon failure returns an error message.
-- **router.route('/admin/:username').delete():** Revokes admin status from a user, upon success returns the user object and upon failure returns an error message.
-- **router.route('/edit/username/:username').post():** Updates a user's username, expects a user object with {username}, upon success returns user object and upon failure reutrns an error message.
-- **router.route('/edit/password/:username').post():** Updates a user's password, expects a user object with {password}, upon success returns user object with {username, icon, stories, prompts, admin, \_id} andupon failure returns an error message.
-- **router.route('/edit/avatar/:username').post():** Updates a user's avatar, expects a user object with {icon}, upon success returns user object and upon failure returns an error message.
-- **router.route('/prompts/:username').post():** Adds a story start to user, expects a story object with {start}, upon success returns user object and upon failure returns an error message.
-- **router.route('/prompts/:username').delete():** Deletes a story start to user, expects a {index} object that represents the index of user's start, upon success returns {start, user} and upon failure returns an error message.
-- **router.route('/stories/:username').post():** Saves a story to user, expects a story object with {title, start, story, contributions \[{username, sentence}], userScores \[{username, score, icon}]}, upon success returns user object and upon failure returns an error message.
-- **router.route('/stories/:username/:story').post():** Edits the title of a story for user, expects a story object with {title}, upon success returns a user object and upon failure returns an error message.
-- **router.route('/stories/:username/:story').get():** Gets a story from user, upon success returns a story object and upon failure returns an error message.
-
-**_rooms.js_**
-
-Our rooms.js file in our Express server provides the routes for all rooms-related activities. Each of the routes underneath detail the function of a room route, the expected data they receive, and expected return value. Please note that each route will begin with '/rooms', for example, '/rooms/create'.
-- **router.route('/create').post():** Creates a room, expects a room object with {code, host, users}, upon success returns a room object and upon failure returns an error message.
-- **router.route('/delete/:room').delete():** Deletes a room, upon success returns the delete room object and upon failure returns an error message.
-- **router.route('/lock/:room').post():** Makes a room private or public, upon success returns the room object and upon failure returns an error message.
-- **router.route('/start/:room').post():** Makes a room have in progress status, upon sucess returns the room object and upon failure returns an error message.
-- **router.route('/join/:room').post():** Adds a new user to room, upon success returns the room object and upon failure returns an error message.
-- **router.route('/genre/:room').post():** Change genre for a room, expects a room object with {genre}, upon success returns the room object and upon failure returns an error message.
-- **router.route('/room/:room').get():** Get a room, upon success returns the room object and upon failure returns an error message.
-
-**_stories.js_**
-
-Our stories.js file in our Express server provides the routes for all stories-related activities. Each of the routes underneath detail the function of a stories route, the expected data they receive, and expected return value. Please note that each route will begin with '/stories', for example, '/stories/genre/:genre'.
-- **router.route('/genre/:genre').post():** Adds a start prompt to the genre and creates the genre if it has yet to be created, expects a story object with {start}, upon success returns the genre object and upon failure returns an error message.
-- **router.route('/genre/:genre/start').post():** Edits the title of a start prompt for the genre, expects a start object with {title}, upon success returns the genre object and upon failure returns an error message.
-- **router.route('/').get():** Gets all genres, upon success returns a genres object with all genres and upon failure returns an error message.
-- **router.route('/genre/:genre').get():** Gets a specific genre, upon success returns the genre object and upon failure returns an error message.
-- **router.route('/genre/:genre/starts').get():** Gets all the start prompts for a genre, upon success returns an object of all the genre's starts and upon failure returns an error message.
-- **router.route('/genre/:genre/').delete():** Deletes a genre, upon success returns the deleted genre object and upon failure returns an error message.
-- **router.route('/genre/:genre/starts').delete():** Deletes a start prompt from the genre, upon success returns the genre object and upon failure returns an error message.
-- **router.route('/prompt/:genre').post():** Adds input prompt to the genre, expects an input prompt object with {backstory, conflict, resolution}, upon success returns the genre object and upon failure returns an error message.
-- **router.route('/prompt/:genre').get():** Gets all the input prompts for a genre, upon success returns the genre's input prompts and upon failure returns an error message.
-- **router.route('/prompt/:genre/').delete():** Deletes an input prompt for a genre, expects a prompt object with {prompt_id}, upon success returns an object containing {prompt, genre} and upon failure returns an error message.
-- **router.route('/story/:story').get():** Gets a story, upon success returns the story object and upon failure returns an error message.
-- **router.route('/start').post():** Creates a new story, expects a story object with {title, start, story, contributions \[{username, sentence}], userScores \[{username, score, icon}]}, upon success returns the story object and upon failure returns an error message.
-- **router.route('/contribute/:story').post():** Adds a contribution to the story, expects a contribution object with {username, sentence}, upon success returns the story object and upon failure returns an error message.
-
-USAGE NOTES & NEW FEATURES
-==================
-
-The general set-up and usage instructions are listed below in the **USAGE INSTRUCTIONS** section. In addition to the general instructions, there are a few special notes to keep in mind when running the TallTales game.
-- **Note: Keep Game Tabs in Focus** - TallTales is an interactive game, meaning that it requires your full attention at all times! To get the best experience of all audio cues, image cues, and flow of game, please keep the game tab in focus at all times. Switching to another tab during the game may cause delays of certain cues.
-- **Note: Do Not Sign-In to the Same Account** - Like with any game, you want to be on different accounts as those who you are playing with. We've given you many to choose from above, but feel free to create your own accounts.
-- **Note: Admin Functionalities** - Admin can reset password and delete users. At the moment, reset username and making other users admin are not fully functionable.
-- **Mute Button** - There is a mute button in the lobby and game stages if you would like to mute the background music and certain audio cues, however, we recommend leaving it on! We worked very hard with our talented friends who composed the game music and voiced our spoken audio cues. All credits of the lobby music goes to Nom Tunes.
-- **Genres/Prompts** - There are existing story genres (ie. Mystery, Comedy, Adventure) and corresponding starting prompts (ie. The Last Heist, The Bar) that you can navigate through for each game. This helps keep each game exciting and fun for returning players! Feel free to create your own genres/prompts to spark a more personalized story.
-- **Leaderboard** - We believe it's important to celebrate your accomplishments. Try hovering/clicking your player scorecard and see all of the contributions that you made to the story! The scoreboard should be enough, but we've also attached a message at the bottom to help identify if you've won or not.
-- **Share Story** - TallTales is a game all about community. Try sharing some of your past stories that you're proud of! Clicking the SHARE STORY button underneath your profile past stories will open up a properly formatted story page. Use the clipboard link to share some laughs or wows with your friends.
-- **Have Fun!** - This is simple, enjoy our game :)
-
-USAGE INSTRUCTIONS
-==================
+## Get Started
 
 **_Setup_**
-1. Go to the `team19` directory and run 
+1. Go to the root directory and run 
 	
 	```npm run setup```
 	
@@ -103,7 +24,6 @@ This should start a production build at the specified `$PORT` in `/team19/client
 	
 3. Navigate to `https://localhost:5010` to display the application. 
 
-==================
 
 **_Usage_**
 
@@ -171,5 +91,77 @@ This should start a production build at the specified `$PORT` in `/team19/client
 
 	Once the game has concluded, we have a final screen displaying each player's score and the finalized story from our game. If you hover over a user's score card, you can see all of their contributions highlighted on the left. If you click on a user's score card then that will lock their contributions as highlighted. We can click the HOME button to indicate that we've finished playing. This takes us back to the dashboard.
 
-THANK YOU FOR CHECKING OUT OUR GAME :)
-=======================================
+## Registered Users
+
+We have set up a number of users to demo the app more convincingly. They are listed below in the username:password format. 
+
+	user:user
+	user1:user1
+	admin:admin
+	jordan:jordan
+	chris:chris
+	jasper:jasper
+	gazi:gazi
+
+These are only the pre-existing default accounts; users are also able to create their own accounts! More on that later.
+
+## Routes
+**_users.js_**
+
+Our users.js file in our Express server provides the routes for all user-related activities. Each of the routes underneath detail the function of a user route, the expected data they receive, and expected return value. Please note that each route will begin with '/users', for example, '/users/register'.
+- **router.route('/register').post():** Adds a user, expects a user object with {username, password, icon} attributes, returns a user object with {username, icon, stories, prompts, admin, \_id}.
+- **router.route('/login').post():** Logs in a user and populates a session, expects a user object with {username, password} attributes, upon success returns a user object with {currentUser: username} and upon failure returns an error.
+- **router.route('/logout').get():** Logs out a user and destroys the session, upon success returns nothing and upon failure returns an error.
+- **router.route('/check-session').get():** Checks if a user is logged in on the session, upon success returns a user object with {currentUser: username} and upon failure changes the status to 401.
+- **router.route('/user/:username').get():** Gets a specific user, upon sucess returns a user object and upon failure returns an error.
+- **router.route('/user/:username').delete():** Deletes a user, upon success returns the deleted user object with {username, icon, stories, prompts, admin, \_id} and upon failure returns an error message.
+- **router.route('/admin/:username').post():** Makes a user admin, upon success returns the user object and upon failure returns an error message.
+- **router.route('/admin/:username').delete():** Revokes admin status from a user, upon success returns the user object and upon failure returns an error message.
+- **router.route('/edit/username/:username').post():** Updates a user's username, expects a user object with {username}, upon success returns user object and upon failure reutrns an error message.
+- **router.route('/edit/password/:username').post():** Updates a user's password, expects a user object with {password}, upon success returns user object with {username, icon, stories, prompts, admin, \_id} andupon failure returns an error message.
+- **router.route('/edit/avatar/:username').post():** Updates a user's avatar, expects a user object with {icon}, upon success returns user object and upon failure returns an error message.
+- **router.route('/prompts/:username').post():** Adds a story start to user, expects a story object with {start}, upon success returns user object and upon failure returns an error message.
+- **router.route('/prompts/:username').delete():** Deletes a story start to user, expects a {index} object that represents the index of user's start, upon success returns {start, user} and upon failure returns an error message.
+- **router.route('/stories/:username').post():** Saves a story to user, expects a story object with {title, start, story, contributions \[{username, sentence}], userScores \[{username, score, icon}]}, upon success returns user object and upon failure returns an error message.
+- **router.route('/stories/:username/:story').post():** Edits the title of a story for user, expects a story object with {title}, upon success returns a user object and upon failure returns an error message.
+- **router.route('/stories/:username/:story').get():** Gets a story from user, upon success returns a story object and upon failure returns an error message.
+
+**_rooms.js_**
+
+Our rooms.js file in our Express server provides the routes for all rooms-related activities. Each of the routes underneath detail the function of a room route, the expected data they receive, and expected return value. Please note that each route will begin with '/rooms', for example, '/rooms/create'.
+- **router.route('/create').post():** Creates a room, expects a room object with {code, host, users}, upon success returns a room object and upon failure returns an error message.
+- **router.route('/delete/:room').delete():** Deletes a room, upon success returns the delete room object and upon failure returns an error message.
+- **router.route('/lock/:room').post():** Makes a room private or public, upon success returns the room object and upon failure returns an error message.
+- **router.route('/start/:room').post():** Makes a room have in progress status, upon sucess returns the room object and upon failure returns an error message.
+- **router.route('/join/:room').post():** Adds a new user to room, upon success returns the room object and upon failure returns an error message.
+- **router.route('/genre/:room').post():** Change genre for a room, expects a room object with {genre}, upon success returns the room object and upon failure returns an error message.
+- **router.route('/room/:room').get():** Get a room, upon success returns the room object and upon failure returns an error message.
+
+**_stories.js_**
+
+Our stories.js file in our Express server provides the routes for all stories-related activities. Each of the routes underneath detail the function of a stories route, the expected data they receive, and expected return value. Please note that each route will begin with '/stories', for example, '/stories/genre/:genre'.
+- **router.route('/genre/:genre').post():** Adds a start prompt to the genre and creates the genre if it has yet to be created, expects a story object with {start}, upon success returns the genre object and upon failure returns an error message.
+- **router.route('/genre/:genre/start').post():** Edits the title of a start prompt for the genre, expects a start object with {title}, upon success returns the genre object and upon failure returns an error message.
+- **router.route('/').get():** Gets all genres, upon success returns a genres object with all genres and upon failure returns an error message.
+- **router.route('/genre/:genre').get():** Gets a specific genre, upon success returns the genre object and upon failure returns an error message.
+- **router.route('/genre/:genre/starts').get():** Gets all the start prompts for a genre, upon success returns an object of all the genre's starts and upon failure returns an error message.
+- **router.route('/genre/:genre/').delete():** Deletes a genre, upon success returns the deleted genre object and upon failure returns an error message.
+- **router.route('/genre/:genre/starts').delete():** Deletes a start prompt from the genre, upon success returns the genre object and upon failure returns an error message.
+- **router.route('/prompt/:genre').post():** Adds input prompt to the genre, expects an input prompt object with {backstory, conflict, resolution}, upon success returns the genre object and upon failure returns an error message.
+- **router.route('/prompt/:genre').get():** Gets all the input prompts for a genre, upon success returns the genre's input prompts and upon failure returns an error message.
+- **router.route('/prompt/:genre/').delete():** Deletes an input prompt for a genre, expects a prompt object with {prompt_id}, upon success returns an object containing {prompt, genre} and upon failure returns an error message.
+- **router.route('/story/:story').get():** Gets a story, upon success returns the story object and upon failure returns an error message.
+- **router.route('/start').post():** Creates a new story, expects a story object with {title, start, story, contributions \[{username, sentence}], userScores \[{username, score, icon}]}, upon success returns the story object and upon failure returns an error message.
+- **router.route('/contribute/:story').post():** Adds a contribution to the story, expects a contribution object with {username, sentence}, upon success returns the story object and upon failure returns an error message.
+
+## Usage Notes
+
+The general set-up and usage instructions are listed below in the **USAGE INSTRUCTIONS** section. In addition to the general instructions, there are a few special notes to keep in mind when running the TallTales game.
+- **Note: Keep Game Tabs in Focus** - TallTales is an interactive game, meaning that it requires your full attention at all times! To get the best experience of all audio cues, image cues, and flow of game, please keep the game tab in focus at all times. Switching to another tab during the game may cause delays of certain cues.
+- **Note: Do Not Sign-In to the Same Account** - Like with any game, you want to be on different accounts as those who you are playing with. We've given you many to choose from above, but feel free to create your own accounts.
+- **Note: Admin Functionalities** - Admin can reset password and delete users. At the moment, reset username and making other users admin are not fully functionable.
+- **Mute Button** - There is a mute button in the lobby and game stages if you would like to mute the background music and certain audio cues, however, we recommend leaving it on! We worked very hard with our talented friends who composed the game music and voiced our spoken audio cues. All credits of the lobby music goes to Nom Tunes.
+- **Genres/Prompts** - There are existing story genres (ie. Mystery, Comedy, Adventure) and corresponding starting prompts (ie. The Last Heist, The Bar) that you can navigate through for each game. This helps keep each game exciting and fun for returning players! Feel free to create your own genres/prompts to spark a more personalized story.
+- **Leaderboard** - We believe it's important to celebrate your accomplishments. Try hovering/clicking your player scorecard and see all of the contributions that you made to the story! The scoreboard should be enough, but we've also attached a message at the bottom to help identify if you've won or not.
+- **Share Story** - TallTales is a game all about community. Try sharing some of your past stories that you're proud of! Clicking the SHARE STORY button underneath your profile past stories will open up a properly formatted story page. Use the clipboard link to share some laughs or wows with your friends.
+
