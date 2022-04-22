@@ -1,0 +1,34 @@
+{
+  "name": "talltales",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "setup": "npm install && cd client && npm install && npm run build && cd ..",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start-dev": "concurrently \"nodemon server\" \"cd client && npm start\""
+  },
+  "author": "",
+  "dependencies": {
+    "and": "^0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "concurrently": "^7.0.0",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "react-audio-player": "^0.17.0",
+    "react-timecode": "^1.2.0",
+    "react-timer-wrapper": "^0.4.1",
+    "socket.io": "^4.4.1",
+    "socket.io-client": "^4.4.1",
+    "validator": "^13.7.0"
+  },
+  "license": "ISC",
+  "description": ""
+}
